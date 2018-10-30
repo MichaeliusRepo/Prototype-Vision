@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public Rigidbody2D rigidbody;
+    public Rigidbody2D rg;
     public int HorizontalSpeed;
     public int VerticalJumpSpeed;
 
@@ -13,13 +13,13 @@ public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        rigidbody = GetComponent<Rigidbody2D>();
+        rg = GetComponent<Rigidbody2D>();
     }
 	
 
 	// Update is called once per frame
 	void Update () {
-        grounded = (rigidbody.velocity.y == 0);
+        grounded = (rg.velocity.y == 0);
 
 
 	}
@@ -27,8 +27,8 @@ public class PlayerController : MonoBehaviour {
     private void FixedUpdate()
     {
         var x = HorizontalSpeed * Input.GetAxis("Horizontal");
-        var y = (Input.GetKey(KeyCode.UpArrow) && grounded) ? VerticalJumpSpeed : rigidbody.velocity.y;
-        rigidbody.velocity = new Vector2(x, y);
+        var y = (Input.GetKey(KeyCode.UpArrow) && grounded) ? VerticalJumpSpeed : rg.velocity.y;
+        rg.velocity = new Vector2(x, y);
 
     }
 
