@@ -10,7 +10,9 @@
   1) Clumsy Jumps	OK!
   2) Wallsticking	FIXED!
   3) No Spins		FIXED!
-  
+- Vision Cooldown OK!
+
+
 TO DO:
 
 - Enemies
@@ -19,8 +21,9 @@ TO DO:
   3) Demo AI / Movement
   4) Sword on Player
   
-- Vision Cooldown
+
 - Build a Demo Level
+
 - Interactives
   Moving Platforms
   Doors
