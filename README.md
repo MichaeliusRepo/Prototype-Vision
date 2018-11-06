@@ -16,16 +16,19 @@
 TO DO:
 
 - Enemies
-  1) Collision Detection
-  2) Adding Lives
-  3) Demo AI / Movement
-  4) Sword on Player
+  1) Collision Detection  OK!
+  2) Hit Points
+  3) Demo AI / Movement (Gustav)
+  4) Invincibility Frames (Rolf)
+  5) Knockback (Rolf)
+  6) Sword on Player?
   
 
-- Build a Demo Level
+- Build a Demo Level (Michaelius)
 
 - Interactives
-  Moving Platforms
-  Doors
-  Traps
+  1) Moving Platforms
+  2) Doors
+  3) Traps (Gustav)
+  4) Goal
 
