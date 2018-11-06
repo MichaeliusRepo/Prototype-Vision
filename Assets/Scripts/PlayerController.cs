@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour {
     public Rigidbody2D rg;
     public int HorizontalSpeed;
     public int VerticalJumpSpeed;
+    public LayerMask Terrain;
+    public float CeilingDistance;
 
     private bool grounded = false;
 
@@ -21,8 +23,27 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
         grounded = (rg.velocity.y == 0);
 
+        Vector2 origin = rg.position;
 
-	}
+
+        RaycastHit2D topLeftHit = Physics2D.Raycast(new Vector2(origin.x - 0.4f, origin.y), Vector2.up, CeilingDistance, Terrain);
+        RaycastHit2D topRightHit = Physics2D.Raycast(new Vector2(origin.x + 0.4f, origin.y), Vector2.up, CeilingDistance, Terrain);
+
+
+        if (topRightHit.collider != null || topLeftHit.collider != null)
+        { // Did hit!
+            grounded = false;
+            rg.velocity = new Vector2(rg.velocity.x, 0);
+            rg.AddForce(new Vector2(0, -5));
+        }
+
+
+        if (rg.velocity.y == 0)
+            rg.AddForce(new Vector2(0, -5));
+
+
+
+    }
 
     private void FixedUpdate()
     {
