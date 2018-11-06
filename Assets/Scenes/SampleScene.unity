@@ -2625,7 +2625,7 @@ GameObject:
   - component: {fileID: 1266092101}
   - component: {fileID: 1266092100}
   - component: {fileID: 1266092104}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2647,10 +2647,10 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 1
+  m_Material: {fileID: 6200000, guid: 6cb8ce1639e98374e9c5c4d5478174a2, type: 2}
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &1266092101
 BoxCollider2D:
@@ -2660,7 +2660,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1266092099}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6cb8ce1639e98374e9c5c4d5478174a2, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2748,7 +2748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rg: {fileID: 0}
-  Speed: 5
+  Speed: 2
 --- !u!1 &1774034272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,7 +2763,6 @@ GameObject:
   - component: {fileID: 1774034277}
   - component: {fileID: 1774034278}
   - component: {fileID: 1774034279}
-  - component: {fileID: 1774034280}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2906,34 +2905,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cooldown: 3
   DisableVisionFeatures: 0
---- !u!251 &1774034279
-PlatformEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1774034272}
-  m_Enabled: 0
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 256
-  m_RotationalOffset: 180
-  m_UseOneWay: 1
-  m_UseOneWayGrouping: 0
-  m_SurfaceArc: 120
-  m_UseSideFriction: 0
-  m_UseSideBounce: 0
-  m_SideArc: 1
---- !u!114 &1774034280
+--- !u!114 &1774034279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1774034272}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d94a842c606ce654e9d450093997bb7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9498de96f5a5b154ebf1eeb2e217f915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rg: {fileID: 1774034273}
-  gravityStrength: -0.5
