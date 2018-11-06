@@ -2892,7 +2892,7 @@ MonoBehaviour:
   Terrain:
     serializedVersion: 2
     m_Bits: 256
-  CeilingDistance: 0.8
+  CeilingDistance: 0.45
 --- !u!114 &1774034278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2904,7 +2904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ebab9c8c56a3664e8ae321b6dc61843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForceTime: 0
+  Cooldown: 3
   DisableVisionFeatures: 0
 --- !u!251 &1774034279
 PlatformEffector2D:

@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 public class PlayerVisionController : MonoBehaviour
 {
 
-    public float ForceTime;
+    public float Cooldown;
 
     public bool DisableVisionFeatures;
 
@@ -30,12 +30,12 @@ public class PlayerVisionController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        bool input = Input.GetKey(KeyCode.T);
+        bool input = Input.GetKeyDown(KeyCode.T);
 
-        if (timeLeft <= 0 && Vision != input)
+        if (timeLeft <= 0 && input)
         {
             visionChanged = true;
-            Vision = input;
+            Vision = !Vision;
         }
     }
 
@@ -48,7 +48,7 @@ public class PlayerVisionController : MonoBehaviour
             UpdateVisibility();
 
             visionChanged = false;
-            timeLeft = ForceTime;
+            timeLeft = Cooldown;
         }
         if (timeLeft > 0 )
             timeLeft -= Time.deltaTime;
