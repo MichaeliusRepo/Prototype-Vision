@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour {
 
     public Rigidbody2D rg;
-    public int speed = 2f;
+    public float speed = 2f;
     public float floordistance = 0.5f;
     public float hitdistance = 0.05f;
     public LayerMask terrain;
