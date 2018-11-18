@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDamage : MonoBehaviour {
 
-    public Rigidbody2D rg;
+    private Rigidbody2D rg;
 
 	// Use this for initialization
 	void Start () {

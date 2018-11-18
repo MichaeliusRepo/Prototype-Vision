@@ -14,7 +14,6 @@ public class EnemyMovementRestricted : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rg = GetComponent<Rigidbody2D>();
-		
 	}
 	
 	// Update is called once per frame

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Environment
   - Enemy
+  - Vision Door
   layers:
   - Default
   - TransparentFX

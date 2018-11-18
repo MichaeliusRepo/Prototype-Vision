@@ -7,7 +7,7 @@ public class PlayerVisionController : MonoBehaviour
 {
 
     public float Cooldown;
-
+    public GameObject VisionBackground;
     public bool DisableVisionFeatures;
 
 
@@ -53,6 +53,13 @@ public class PlayerVisionController : MonoBehaviour
         if (timeLeft > 0 )
             timeLeft -= Time.deltaTime;
 
+        //if (Vision)
+        //{
+        //    var PlayerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+        //    VisionBackground.GetComponent<Transform>().position = new Vector3(PlayerPosition.x, PlayerPosition.y, 15);
+        //}
+
+
     }
 
     private void UpdateVisibility()
@@ -72,5 +79,16 @@ public class PlayerVisionController : MonoBehaviour
         var enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (var enemy in enemies)
             enemy.gameObject.GetComponent<SpriteRenderer>().enabled = Vision;
+
+        var visionDoors = GameObject.FindGameObjectsWithTag("Vision Door");
+        foreach (var visionDoor in visionDoors)
+        {
+            visionDoor.gameObject.GetComponent<SpriteRenderer>().enabled = !Vision;
+            visionDoor.gameObject.GetComponent<BoxCollider2D>().enabled = !Vision;
+        }
+
+        VisionBackground.GetComponent<SpriteRenderer>().enabled = Vision;
+        //var PlayerPosition = GameObject.FindGameObjectWithTag("Player").transform.position;
+        //VisionBackground.GetComponent<Transform>().position = new Vector3(PlayerPosition.x, PlayerPosition.y, 15);
     }
 }
