@@ -21,7 +21,7 @@ public class PlayerSoundTriggers : MonoBehaviour {
         Vector3 currentVelocity = rg.velocity;
 
         // Landed
-        if (previousVelocity.y < 0 && currentVelocity.y == 0)
+        if (previousVelocity.y < -2 && currentVelocity.y == 0)
             AudioSource.PlayClipAtPoint(landSFX, rg.position);
 
         previousVelocity = currentVelocity;
