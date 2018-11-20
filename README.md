@@ -17,18 +17,22 @@ TO DO:
 
 - Enemies
   1) Collision Detection  OK!
-  2) Hit Points
-  3) Demo AI / Movement (Gustav)
-  4) Invincibility Frames (Rolf)
-  5) Knockback (Rolf)
-  6) Sword on Player?
-  
+  2) Hit Points           OK!
+  3) Demo AI / Movement   OK!
+  4) Invincibility Frames OK!
+  5) Knockback (Rolf)     OK!
+  6) Sword on Player?     (Rolf)
 
-- Build a Demo Level (Michaelius)
+- Fix Player Movement Bug (???)
+
+- Build a Demo Level      OK!
+- Add Player Animations   (Michael)
 
 - Interactives
   1) Moving Platforms
   2) Doors
-  3) Traps (Gustav)
-  4) Goal
+  3) Traps  (Gustav)
+  4) Goal   (Gustav)
+  
+ - Report                 (Michael)
 
