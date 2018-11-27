@@ -1,11 +1,23 @@
 fileFormatVersion: 2
-guid: 7d44ec62d0c129c48b070f0fd3208a31
+guid: 0b2cb35d054d9bc4eacdda8b2e0e15cc
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Priestess_0
-    21300002: Priestess_1
-    21300004: Priestess_2
-    21300006: Priestess_3
+    21300000: Blue Knight_0
+    21300002: Blue Knight_1
+    21300004: Blue Knight_2
+    21300006: Blue Knight_3
+    21300008: Blue Knight_4
+    21300010: Blue Knight_5
+    21300012: Blue Knight_6
+    21300014: Blue Knight_7
+    21300016: Dark Knight_0
+    21300018: Dark Knight_1
+    21300020: Dark Knight_2
+    21300022: Dark Knight_3
+    21300024: Dark Knight_4
+    21300026: Dark Knight_5
+    21300028: Dark Knight_6
+    21300030: Dark Knight_7
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -88,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Priestess_0
+      name: Dark Knight_0
       rect:
         serializedVersion: 2
         x: 0
@@ -102,13 +114,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47b680db6f9336e4489f713e49d197e9
+      spriteID: 559ce97cc149eba48a8bd532ba84d37f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Priestess_1
+      name: Dark Knight_1
       rect:
         serializedVersion: 2
         x: 32
@@ -122,13 +134,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cb75f7ea2eb54146afc17132e100b96
+      spriteID: a3536585d39d9664785852a5f403cb02
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Priestess_2
+      name: Dark Knight_2
       rect:
         serializedVersion: 2
         x: 64
@@ -142,13 +154,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e11f779cf46be694ab92d444532e39f4
+      spriteID: 3f0ee424bf7000748b70d606823e7f1e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Priestess_3
+      name: Dark Knight_3
       rect:
         serializedVersion: 2
         x: 96
@@ -162,7 +174,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a31cc572ed189dc4b9528bb4c9bb00fe
+      spriteID: 4cf329aa309494643ad832a985ef9188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark Knight_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d64c8fc7bacd649a758d51ec8c1395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark Knight_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078c64dc4771ed44c8f76f0a0d2ab2d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark Knight_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1058bd8780e1474b8a58f1352e3d1fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dark Knight_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2568065c26335734b9dcd4ee1b563db0
       vertices: []
       indices: 
       edges: []
@@ -170,7 +262,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d4da6c4604fa77440a143b1ae411ef4a
+    spriteID: 93ccaf80f2139c14ca5f572c01f4706a
     vertices: []
     indices: 
     edges: []

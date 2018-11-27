@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMovementRestricted : MonoBehaviour {
 
-    public Rigidbody2D rg;
+    private Rigidbody2D rg;
     public int speed;
     public float floor;
     public LayerMask Terrain;
