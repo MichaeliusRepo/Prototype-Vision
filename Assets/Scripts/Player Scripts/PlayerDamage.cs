@@ -9,7 +9,7 @@ public class PlayerDamage : MonoBehaviour {
     Renderer rend;
     Color c;
     bool immunity;
-    int lifePoints;
+    public int lifePoints;
     float recoveryTime;
 
     // Use this for initialization
@@ -18,7 +18,7 @@ public class PlayerDamage : MonoBehaviour {
         rend = GetComponent<Renderer>();
         c = rend.material.color;
         immunity = false;
-        lifePoints = 3;
+        //lifePoints = 3;
         recoveryTime = 3;
     }
 	
