@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     private bool grounded = false;
     private bool FacingLeft;
+    private bool knockedback = false;
+    private Vector2 knockbackDirection;
 
     // Use this for initialization
     void Start()
@@ -51,8 +53,10 @@ public class PlayerController : MonoBehaviour
 
 
 
-
-        rg.velocity = new Vector2(x, y);
+        if (!knockedback)
+        {
+            rg.velocity = new Vector2(x, y);
+        }
 
         //if (x == 0)
         //Debug.Log(Input.GetAxis("Horizontal"));
@@ -114,6 +118,35 @@ public class PlayerController : MonoBehaviour
             rg.velocity = new Vector2(rg.velocity.x, 0);
             rg.AddForce(new Vector2(0, -5));
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) //Enemy interaction and damage
+    {
+        if (other.gameObject.layer == 9 || other.gameObject.layer == 10) // 9 is Enemy Layer, 10 is Traps
+        {
+            if (transform.position.x - other.transform.position.x < 0)
+            {
+                knockbackDirection = new Vector2(-1.0f, 0.3f).normalized;
+                rg.velocity = new Vector2(0f, 0f);
+                rg.AddForce(knockbackDirection * 500);
+                StartCoroutine("KnockbackTimer");
+            }
+            else
+            {
+                knockbackDirection = new Vector2(1.0f, 0.3f).normalized;
+                rg.velocity = new Vector2(0f, 0f);
+                rg.AddForce(knockbackDirection * 500);
+                StartCoroutine("KnockbackTimer");
+            }
+        }
+
+    }
+
+    IEnumerator KnockbackTimer()
+    {
+        knockedback = true;
+        yield return new WaitForSeconds(0.4f);
+        knockedback = false;
     }
 
 }
