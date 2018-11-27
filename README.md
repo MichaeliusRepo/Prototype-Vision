@@ -23,16 +23,16 @@ TO DO:
   5) Knockback (Rolf)     OK!
   6) Sword on Player?     (Rolf)
 
-- Fix Player Movement Bug (???)
-
 - Build a Demo Level      OK!
-- Add Player Animations   (Michael)
+- Add Player Animations   OK!
 
 - Interactives
-  1) Moving Platforms
-  2) Doors
-  3) Traps  (Gustav)
-  4) Goal   (Gustav)
+  1) Doors                OK!
+  2) Traps                (Gustav)
+  3) Goal                 (Gustav)
   
  - Report                 (Michael)
-
+ - Add audio              (Michael)
+ - Add more levels.       (Michael)
+    (The levels must be designed with lots of vision interactions!)
+ 
