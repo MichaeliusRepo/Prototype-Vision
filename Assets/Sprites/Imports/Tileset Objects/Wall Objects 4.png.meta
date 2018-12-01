@@ -1,0 +1,415 @@
+fileFormatVersion: 2
+guid: 5604302557e26424caf4486d5abd61ee
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Wall Objects 2_0
+    21300002: Wall Objects 2_1
+    21300004: Wall Objects 2_2
+    21300006: Wall Objects 2_3
+    21300008: Wall Objects 2_4
+    21300010: Wall Objects 2_5
+    21300012: Wall Objects 2_6
+    21300014: Wall Objects 2_7
+    21300016: Wall Objects 2_8
+    21300018: Wall Objects 2_9
+    21300020: Wall Objects 2_10
+    21300022: Wall Objects 2_11
+    21300024: Wall Objects 2_12
+    21300026: Wall Objects 2_13
+    21300028: Wall Objects 2_14
+    21300030: Wall Objects 2_15
+    21300032: Wall Objects 2_16
+    21300034: Wall Objects 2_17
+    21300036: Wall Objects 2_18
+    21300038: Wall Objects 2_19
+    21300040: Wall Objects 2_20
+    21300042: Wall Objects 2_21
+    21300044: Wall Objects 2_22
+    21300046: Wall Objects 2_23
+    21300048: Wall Objects 2_24
+    21300050: Wall Objects 2_25
+    21300052: Wall Objects 2_26
+    21300054: Wall Objects 2_27
+    21300056: Wall Objects 2_28
+    21300058: Wall Objects 2_29
+    21300060: Wall Objects 2_30
+    21300062: Wall Objects 2_31
+    21300064: Wall Objects 2_32
+    21300066: Wall Objects 2_33
+    21300068: Wall Objects 2_34
+    21300070: Wall Objects 2_35
+    21300072: Wall Objects 2_36
+    21300074: Wall Objects 2_37
+    21300076: Wall Objects 2_38
+    21300078: Wall Objects 2_39
+    21300080: Wall Objects 2_40
+    21300082: Wall Objects 2_41
+    21300084: Wall Objects 2_42
+    21300086: Wall Objects 2_43
+    21300088: Wall Objects 2_44
+    21300090: Wall Objects 2_45
+    21300092: Wall Objects 2_46
+    21300094: Wall Objects 2_47
+    21300096: Wall Objects 2_48
+    21300098: Wall Objects 2_49
+    21300100: Wall Objects 2_50
+    21300102: Wall Objects 2_51
+    21300104: Wall Objects 2_52
+    21300106: Wall Objects 2_53
+    21300108: Wall Objects 2_54
+    21300110: Wall Objects 2_55
+    21300112: Wall Objects 2_56
+    21300114: Wall Objects 2_57
+    21300116: Wall Objects 2_58
+    21300118: Wall Objects 2_59
+    21300120: Wall Objects 2_60
+    21300122: Wall Objects 2_61
+    21300124: Wall Objects 2_62
+    21300126: Wall Objects 2_63
+    21300128: Wall Objects 4_0
+    21300130: Wall Objects 4_1
+    21300132: Wall Objects 4_2
+    21300134: Wall Objects 4_3
+    21300136: Wall Objects 4_4
+    21300138: Wall Objects 4_5
+    21300140: Wall Objects 4_6
+    21300142: Wall Objects 4_7
+    21300144: Wall Objects 4_8
+    21300146: Wall Objects 4_9
+    21300148: Wall Objects 4_10
+    21300150: Wall Objects 4_11
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wall Objects 4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c9f8f4424089446bc2aa8cf2e82e95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Objects 4_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730aacaf0dabe7747af7ad139292a184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Objects 4_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06eeee1a2221a2346b8737b3dce34279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Objects 4_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5b3df6acbc8cf49979a2717463936b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Objects 4_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e09bef919b27ca4fb71b2d911462f29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Objects 4_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e139b8ada6d2c4aaa00658e073bc02
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Objects 4_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3da09363d425b40884f1ae0f91601a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Objects 4_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6b12e4bcc7bb24099c7a4193afc31d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Objects 4_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791ca7680d2023b47b4e8dce7a0ef17b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Objects 4_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89cd7f72a66fabc47b86f8eb473fe966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Objects 4_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c2f72a0f0346146b8873c23e3574e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall Objects 4_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5df4c18418973c4f9d99628a3d7e597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4352e06bfb305f34fa2588668d143aa8
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
