@@ -14,10 +14,12 @@ public class PlayerVisionController : MonoBehaviour
     private bool Vision = false;
     private bool visionChanged;
     private float timeLeft = 0;
+    private PlayerSoundTriggers sfxPlayer;
 
     // Use this for initialization
     void Start()
     {
+        sfxPlayer = GetComponent<PlayerSoundTriggers>();
         if (!DisableVisionFeatures)
             UpdateVisibility();
     }
@@ -49,6 +51,7 @@ public class PlayerVisionController : MonoBehaviour
 
             visionChanged = false;
             timeLeft = Cooldown;
+            sfxPlayer.PlayToggleSFX();
         }
         if (timeLeft > 0 )
             timeLeft -= Time.deltaTime;

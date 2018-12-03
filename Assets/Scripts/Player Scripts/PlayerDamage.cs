@@ -11,6 +11,7 @@ public class PlayerDamage : MonoBehaviour {
     bool immunity;
     public int lifePoints;
     float recoveryTime;
+    private PlayerSoundTriggers sfxPlayer;
 
     // Use this for initialization
     void Start () {
@@ -20,6 +21,7 @@ public class PlayerDamage : MonoBehaviour {
         immunity = false;
         //lifePoints = 3;
         recoveryTime = 3;
+        sfxPlayer = GetComponent<PlayerSoundTriggers>();
     }
 	
 	// Update is called once per frame
@@ -35,6 +37,7 @@ public class PlayerDamage : MonoBehaviour {
             {
                 StartCoroutine("ImmunityFrames");
                 lifePoints -= 1;
+                sfxPlayer.PlayHitSFX();
             }
             else
             {
