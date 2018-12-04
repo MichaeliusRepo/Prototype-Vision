@@ -32,7 +32,7 @@ public class PlayerVisionController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        bool input = Input.GetKeyDown(KeyCode.T);
+        bool input = Input.GetKeyDown(KeyCode.T) || Input.GetKeyDown(KeyCode.Joystick1Button2) || Input.GetKeyDown(KeyCode.Joystick1Button3);
 
         if (timeLeft <= 0 && input)
         {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private bool FacingLeft;
     private bool knockedback = false;
     private Vector2 knockbackDirection;
+    private float xInput;
 
     public float KnockbackPower;
 
@@ -34,11 +36,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         grounded = (rg.velocity.y == 0);
+
+
     }
 
     private void FixedUpdate()
     {
-        var x = HorizontalSpeed * Input.GetAxis("Horizontal");
+        //var xInput = (Input.GetAxis("Horizontal") * Input.GetAxis("Horizontal") > 0.5) ? Input.GetAxis("Horizontal") : 0;
+        xInput = Input.GetAxis("Horizontal");
+        if (xInput > -0.2 && xInput < 0.2)
+            xInput = 0;
+        var x = HorizontalSpeed * xInput;
 
         var origin = rg.position;
         RaycastHit2D topLeftHit = Physics2D.Raycast(new Vector2(origin.x - 0.4f, origin.y), Vector2.up, CeilingDistance, Terrain);
@@ -49,7 +57,7 @@ public class PlayerController : MonoBehaviour
         float y = rg.velocity.y;
 
         if (!topLeftHit && !topRightHit)
-            if (Input.GetKey(KeyCode.UpArrow) && grounded)
+            if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Joystick1Button0) || Input.GetKey(KeyCode.Joystick1Button1)) && grounded)
                 y = VerticalJumpSpeed;
 
 
@@ -66,6 +74,10 @@ public class PlayerController : MonoBehaviour
 
         //StopWallSticking();
         //StopCeilingSticking();
+
+        // Restarts game
+        if (Input.GetKey(KeyCode.Joystick1Button6))
+            RestartGame();
     }
 
 
@@ -80,9 +92,9 @@ public class PlayerController : MonoBehaviour
 
     private void FlipSprite()
     {
-        if (Input.GetAxis("Horizontal") > 0)
+        if (xInput > 0)
             spriteRenderer.flipX = false;
-        if (Input.GetAxis("Horizontal") < 0)
+        if (xInput < 0)
             spriteRenderer.flipX = true;
 
         //if (rg.velocity.x != 0)
@@ -143,6 +155,12 @@ public class PlayerController : MonoBehaviour
         knockedback = true;
         yield return new WaitForSeconds(0.4f);
         knockedback = false;
+    }
+
+    private void RestartGame()
+    {
+
+        SceneManager.LoadScene("Level 1");
     }
 
 }
