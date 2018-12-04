@@ -19,6 +19,8 @@ public class EnemyMovement : MonoBehaviour
     public bool gravity = true;
     int dir = 1;
 
+    public int health;
+
 
     //private bool goingRight;
 
@@ -30,12 +32,16 @@ public class EnemyMovement : MonoBehaviour
         if (gravity == false)
             rg.gravityScale = 0;
         //goingRight = true;
+        health = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
 
     }
 
