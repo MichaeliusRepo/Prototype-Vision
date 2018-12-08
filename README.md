@@ -22,12 +22,12 @@
   
 - Interactives
   1) Doors                Make sprites and insert in level
-  2) Traps                (Gustav)
+  2) Traps                SPIKES ADDED!
  
 - Feedback/Suggestions
-  1) Vision toggle needs more visual feedback.
-  2) Adjust cooldown on vision toggle (maybe 1.5 sec, maybe 1 sec?)
-  3) Fix no jumping on corners!
+  1) Vision toggle feedback.    DONE! with better SFX/Vignette fade-in
+  2) Adjust toggle cooldown time?
+  3) Fix no jumping on corners!       OK!
   4) Instruct player to toggle vision in level 2
   5) Display 3 lives
   6) More blinking on damage taken
