@@ -42,42 +42,14 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //var xInput = (Input.GetAxis("Horizontal") * Input.GetAxis("Horizontal") > 0.5) ? Input.GetAxis("Horizontal") : 0;
-        xInput = Input.GetAxis("Horizontal");
-        if (xInput > -0.2 && xInput < 0.2)
-            xInput = 0;
-        var x = HorizontalSpeed * xInput;
-
-        var origin = rg.position;
-        RaycastHit2D topLeftHit = Physics2D.Raycast(new Vector2(origin.x - 0.4f, origin.y), Vector2.up, CeilingDistance, Terrain);
-        RaycastHit2D topRightHit = Physics2D.Raycast(new Vector2(origin.x + 0.4f, origin.y), Vector2.up, CeilingDistance, Terrain);
-
-        //var y = (Input.GetKey(KeyCode.UpArrow) && grounded) ? VerticalJumpSpeed : rg.velocity.y;
-
-        float y = rg.velocity.y;
-
-        if (!topLeftHit && !topRightHit)
-            if ((Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Joystick1Button0) || Input.GetKey(KeyCode.Joystick1Button1)) && grounded)
-                y = VerticalJumpSpeed;
-
-
-
+        var x = GetHorizontalInput();
+        var y = GetVerticalInput();
 
         if (!knockedback)
-        {
             rg.velocity = new Vector2(x, y);
-        }
 
-        //if (x == 0)
-        //Debug.Log(Input.GetAxis("Horizontal"));
-
-
-        //StopWallSticking();
-        //StopCeilingSticking();
-
-        // Restarts game
-        if (Input.GetKey(KeyCode.Joystick1Button6))
-            RestartGame();
+        // Restart game
+        if (Input.GetKey(KeyCode.Joystick1Button6)) RestartGame();
     }
 
 
@@ -90,18 +62,73 @@ public class PlayerController : MonoBehaviour
         GetComponent<Animator>().enabled = !(rg.velocity.x == 0 || rg.velocity.y != 0);
     }
 
+    private float GetHorizontalInput()
+    {
+        xInput = Input.GetAxis("Horizontal");
+        if (xInput > -0.2 && xInput < 0.2) xInput = 0; // For sensitive axis on controllers.
+        return HorizontalSpeed * xInput;
+    }
+
+    private float GetVerticalInput()
+    {
+        var origin = rg.position;
+
+        // Checks if player character hit ceiling on left- and right-most parts of hitbox
+        RaycastHit2D topLeftHit = Physics2D.Raycast(new Vector2(origin.x - 0.3f, origin.y), Vector2.up, CeilingDistance, Terrain);
+        RaycastHit2D topRightHit = Physics2D.Raycast(new Vector2(origin.x + 0.3f, origin.y), Vector2.up, CeilingDistance, Terrain);
+
+        float y = rg.velocity.y;
+
+        if (grounded)
+            if (!topLeftHit && !topRightHit)
+                if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Joystick1Button0) || Input.GetKey(KeyCode.Joystick1Button1))
+                    y = VerticalJumpSpeed;
+
+        return y;
+    }
+
     private void FlipSprite()
     {
         if (xInput > 0)
             spriteRenderer.flipX = false;
         if (xInput < 0)
             spriteRenderer.flipX = true;
-
-        //if (rg.velocity.x != 0)
-        //    if ((rg.velocity.x > 0 && spriteRenderer.flipX) || (rg.velocity.x < 0 && !spriteRenderer.flipX))
-        //        spriteRenderer.flipX = !spriteRenderer.flipX;
     }
 
+    private void RestartGame()
+    {
+        SceneManager.LoadScene("Level 1");
+    }
+
+
+    #region Enemy_Interaction_&_Damage
+    private void OnTriggerEnter2D(Collider2D other) //Enemy interaction and damage
+    {
+        if (other.gameObject.layer == 9 || other.gameObject.layer == 10) // 9 is Enemy Layer, 10 is Traps
+        {
+            if (transform.position.x - other.transform.position.x < 0)
+                knockbackDirection = new Vector2(-1.0f, 0.3f).normalized;
+            else
+                knockbackDirection = new Vector2(1.0f, 0.3f).normalized;
+            knockbackDirection *= KnockbackPower;
+            rg.velocity = new Vector2(0f, 0f);
+            rg.AddForce(knockbackDirection * 500);
+            StartCoroutine("KnockbackTimer");
+        }
+
+    }
+
+    IEnumerator KnockbackTimer()
+    {
+        knockedback = true;
+        yield return new WaitForSeconds(0.4f);
+        knockedback = false;
+    }
+    #endregion
+
+
+    #region Legacy Code
+    // This is unused code - only for reference!
     private void StopWallSticking()
     {
         //var layer = LayerMask.NameToLayer("Terrain");
@@ -134,33 +161,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) //Enemy interaction and damage
-    {
-        if (other.gameObject.layer == 9 || other.gameObject.layer == 10) // 9 is Enemy Layer, 10 is Traps
-        {
-            if (transform.position.x - other.transform.position.x < 0)
-                knockbackDirection = new Vector2(-1.0f, 0.3f).normalized;
-            else
-                knockbackDirection = new Vector2(1.0f, 0.3f).normalized;
-            knockbackDirection *= KnockbackPower;
-            rg.velocity = new Vector2(0f, 0f);
-            rg.AddForce(knockbackDirection * 500);
-            StartCoroutine("KnockbackTimer");
-        }
-
-    }
-
-    IEnumerator KnockbackTimer()
-    {
-        knockedback = true;
-        yield return new WaitForSeconds(0.4f);
-        knockedback = false;
-    }
-
-    private void RestartGame()
-    {
-
-        SceneManager.LoadScene("Level 1");
-    }
+    #endregion
 
 }
