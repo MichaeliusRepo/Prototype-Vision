@@ -9,7 +9,8 @@ public class PlayerDamage : MonoBehaviour {
     Renderer rend;
     Color c;
     bool immunity;
-    public int lifePoints;
+    public int HitPoints;
+    private static int lifePoints;
     float recoveryTime;
     private PlayerSoundTriggers sfxPlayer;
 
@@ -22,6 +23,7 @@ public class PlayerDamage : MonoBehaviour {
         //lifePoints = 3;
         recoveryTime = 3;
         sfxPlayer = GetComponent<PlayerSoundTriggers>();
+        lifePoints = HitPoints;
     }
 	
 	// Update is called once per frame

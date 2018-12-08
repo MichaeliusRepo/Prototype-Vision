@@ -1434,6 +1434,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 82510739727382400, guid: 5b073deb7d48f0d42a2b60457dc64ea3,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82510739727382400, guid: 5b073deb7d48f0d42a2b60457dc64ea3,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b073deb7d48f0d42a2b60457dc64ea3, type: 2}
   m_IsPrefabAsset: 0
@@ -7707,6 +7717,11 @@ Prefab:
       propertyPath: VisionBackground
       value: 
       objectReference: {fileID: 1696995893}
+    - target: {fileID: 114652046178289190, guid: 46b5e63345a411d43b0eb4ab58e0d0f8,
+        type: 2}
+      propertyPath: HitPoints
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46b5e63345a411d43b0eb4ab58e0d0f8, type: 2}
   m_IsPrefabAsset: 0
