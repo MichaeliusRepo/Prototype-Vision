@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rg;
     private SpriteRenderer spriteRenderer;
-    private BoxCollider2D boxCollider2D;
+    //private BoxCollider2D boxCollider2D;
 
     public int HorizontalSpeed;
     public int VerticalJumpSpeed;
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         rg = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        //boxCollider2D = GetComponent<BoxCollider2D>();
     }
 
 

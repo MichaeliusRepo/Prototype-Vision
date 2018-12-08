@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDamage : MonoBehaviour {
 
-    private Rigidbody2D rg;
+    //private Rigidbody2D rg;
     Renderer rend;
     Color c;
     bool immunity;
@@ -16,7 +16,7 @@ public class PlayerDamage : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        rg = GetComponent<Rigidbody2D>();
+        //rg = GetComponent<Rigidbody2D>();
         rend = GetComponent<Renderer>();
         c = rend.material.color;
         immunity = false;
