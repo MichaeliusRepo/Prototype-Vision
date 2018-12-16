@@ -32,6 +32,8 @@
  - Implemented but unused:
  1) Player Attack
  2) Doors
+ 
+ - To Do
  3) HUD Lives Display
  4) Invincibility Frames Flashing
  
