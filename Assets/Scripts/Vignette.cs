@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Vignette : MonoBehaviour
 {
     public bool Disable;
-    private readonly float MinimumScale = 0.6f;
+    private readonly float MinimumScale = 1.0f;
 
     private RectTransform rectTransform;
 
@@ -31,7 +31,7 @@ public class Vignette : MonoBehaviour
         float scale = rectTransform.localScale.x;
 
         if (scale > MinimumScale)
-            scale -= (1.15f * Time.deltaTime);
+            scale -= (0.96f * Time.deltaTime);
 
         if (scale < MinimumScale)
             scale = MinimumScale;
