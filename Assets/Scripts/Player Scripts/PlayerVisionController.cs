@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class PlayerVisionController : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class PlayerVisionController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        bool input = Input.GetKeyDown(KeyCode.T);
+        bool input = Input.GetKeyDown(KeyCode.T) || Input.GetKeyDown(KeyCode.Joystick1Button2) || Input.GetKeyDown(KeyCode.Joystick1Button3);
 
         if (timeLeft <= 0 && input)
         {
@@ -53,7 +54,7 @@ public class PlayerVisionController : MonoBehaviour
             timeLeft = Cooldown;
             sfxPlayer.PlayToggleSFX();
         }
-        if (timeLeft > 0 )
+        if (timeLeft > 0)
             timeLeft -= Time.deltaTime;
 
         //if (Vision)
@@ -77,6 +78,10 @@ public class PlayerVisionController : MonoBehaviour
             var tilemapRenderer = en.gameObject.GetComponent<TilemapRenderer>();
             if (tilemapRenderer != null)
                 tilemapRenderer.enabled = !Vision;
+
+            var vignette = en.gameObject.GetComponent<RectTransform>();
+            if (vignette != null)
+                vignette.localScale = new Vector3(3, 3, 0);
         }
 
         var enemies = GameObject.FindGameObjectsWithTag("Enemy");

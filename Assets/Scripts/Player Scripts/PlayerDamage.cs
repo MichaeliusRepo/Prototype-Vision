@@ -5,23 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDamage : MonoBehaviour {
 
-    private Rigidbody2D rg;
+    //private Rigidbody2D rg;
     Renderer rend;
     Color c;
     bool immunity;
-    public int lifePoints;
+    public int HitPoints;
+    private static int lifePoints;
     float recoveryTime;
     private PlayerSoundTriggers sfxPlayer;
 
     // Use this for initialization
     void Start () {
-        rg = GetComponent<Rigidbody2D>();
+        //rg = GetComponent<Rigidbody2D>();
         rend = GetComponent<Renderer>();
         c = rend.material.color;
         immunity = false;
         //lifePoints = 3;
         recoveryTime = 3;
         sfxPlayer = GetComponent<PlayerSoundTriggers>();
+        lifePoints = HitPoints;
     }
 	
 	// Update is called once per frame
