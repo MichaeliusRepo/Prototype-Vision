@@ -1,39 +1,20 @@
-# Prototype-Vision
+## License
 
-- Version Control	OK!
-- Assets Import		OK!
-- Platformer Physics	OK!
-- Enemy placeholders	OK!
-- Toggle Vision		OK!
-- Tilemaps		OK!
-- Physics		YES!
-  1) No Clumsy Jumps	OK!
-  2) No Wallsticking	OK!
-  3) No Spins		OK!
-- Vision Cooldown OK!
- - Report             Thank you for your hard work.
- - Audio              OK!
- - Three levels!       OK!
- - Traps                SPIKES ADDED!
-  
-- Enemies
-  1) Collision Detection  OK!
-  2) Hit Points           OK!
-  3) Demo AI / Movement   OK!
-  4) Invincibility Frames OK!
-  5) Knockback (Rolf)     OK!
-  6) Sword on Player?     (Rolf)
-  
-- Feedback/Suggestions
-  1) Vision toggle feedback.      OK!
-  2) Fix no jumping on corners!       OK!
-  3) UI instructions                  OK!
+This software has no license. The hosting of this project at GitHub allows you to view this repository, however you retain no permission from the creators of this software to use, modify or share this software for any intent or purpose.
 
- - Implemented but unused:
- 1) Player Attack
- 2) Doors
- 
- - To Do
- 3) HUD Lives Display
- 4) Invincibility Frames Flashing
- 
+This software is under exclusive copyright. You are not allowed to copy, distribute or modify this work without risk of take-downs, litigations or other legal actions.
+
+More info at: https://choosealicense.com/no-permission/#for-users
+
+
+# Gift of Vision
+A platformer game written in C# using the Unity engine, taking place in a castle.
+
+In this game, the player must complete levels with very limited vision. The player can toggle between viewing the only the level and its deadly obstacles, or only the enemies inhabiting the level.
+
+All graphics and audio are original assets.
+
+## Images
+
+![ok](https://imgur.com/09N2D2c.png)
+![ok](https://imgur.com/7KNHtTH.png)
